@@ -1,0 +1,354 @@
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo
+$ git init
+Initialized empty Git repository in E:/study/wipromstraining_sts_ws/git_repo/.git/
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        config-client-dev.properties
+        config-client-prod.properties
+        config-client.properties
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git add .
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   config-client-dev.properties
+        new file:   config-client-prod.properties
+        new file:   config-client.properties
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git commit -m "Property Files are added"
+[master (root-commit) b560ff8] Property Files are added
+ 3 files changed, 6 insertions(+)
+ create mode 100644 config-client-dev.properties
+ create mode 100644 config-client-prod.properties
+ create mode 100644 config-client.properties
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   config-client-dev.properties
+        modified:   config-client-prod.properties
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git add .
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git commit -m "property file added"
+[master f2ce2db] property file added
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   config-client-prod.properties
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git add .
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git commit -m "df"
+[master b8e4550] df
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git add .
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git commit -m "df"
+[master f014978] df
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add https://github.com/rajeshkothari2506/Rajesh-Kothari.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add origin https://github.com/rajeshkothari2506/Rajesh-Kothari.git
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git commit -m "commiting in remote"
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push -u origin master
+To https://github.com/rajeshkothari2506/Rajesh-Kothari.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/rajeshkothari2506/Rajesh-Kothari.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git fetch -all
+error: did you mean `--all` (with two dashes)?
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git fetch --all
+Fetching origin
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 635 bytes | 3.00 KiB/s, done.
+From https://github.com/rajeshkothari2506/Rajesh-Kothari
+ * [new branch]      master     -> origin/master
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push -u origin master
+To https://github.com/rajeshkothari2506/Rajesh-Kothari.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rajeshkothari2506/Rajesh-Kothari.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git pull origin master
+From https://github.com/rajeshkothari2506/Rajesh-Kothari
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push -u origin master
+To https://github.com/rajeshkothari2506/Rajesh-Kothari.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/rajeshkothari2506/Rajesh-Kothari.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git pull origin master
+From https://github.com/rajeshkothari2506/Rajesh-Kothari
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add origin https://github.com/rajeshkothari2506/git_remote.git
+fatal: remote origin already exists.
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add master https://github.com/rajeshkothari2506/git_remote.git
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push -u master master
+remote: Repository not found.
+fatal: repository 'https://github.com/rajeshkothari2506/git_remote.git/' not found
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git init
+Reinitialized existing Git repository in E:/study/wipromstraining_sts_ws/git_repo/.git/
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remove origin
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git repo
+git: 'repo' is not a git command. See 'git --help'.
+
+The most similar commands are
+        grep
+        reflog
+        remote
+        repack
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add test_repo https://github.com/rajeshkothari2506/mytestrepo.git
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push test_repo master
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 1.29 KiB | 82.00 KiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/rajeshkothari2506/mytestrepo.git
+ * [new branch]      master -> master
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push test_repo :master
+To https://github.com/rajeshkothari2506/mytestrepo.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'https://github.com/rajeshkothari2506/mytestrepo.git'
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git rm
+fatal: No pathspec was given. Which files should I remove?
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git rm config-client.properties
+rm 'config-client.properties'
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git rm config-client-prod.properties
+rm 'config-client-prod.properties'
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git rm config-client-dev.properties
+rm 'config-client-dev.properties'
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    config-client-dev.properties
+        deleted:    config-client-prod.properties
+        deleted:    config-client.properties
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push test_repo master
+Everything up-to-date
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ rm -rf
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git branch
+* master
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git remote add test https://github.com/rajeshkothari2506/test.git
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    config-client-dev.properties
+        deleted:    config-client-prod.properties
+        deleted:    config-client.properties
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        config-client-dev.properties
+        config-client-prod.properties
+        config-client.properties
+
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git add .
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$ git push test master
+
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 1.29 KiB | 101.00 KiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/rajeshkothari2506/test.git
+ * [new branch]      master -> master
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$
+
+Rajesh Kothari@Rajesh MINGW64 /e/study/wipromstraining_sts_ws/git_repo (master)
+$
